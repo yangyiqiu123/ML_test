@@ -14,10 +14,9 @@ from flask import (
     send_from_directory,
     url_for,
 )
-from keras.layers import Conv2D, Dense, Dropout, Flatten, MaxPooling2D
-from keras.models import Sequential
 from PIL import Image
-from tensorflow import keras
+from tensorflow.keras.layers import Conv2D, Dense, Dropout, Flatten, MaxPooling2D
+from tensorflow.keras.models import Sequential, load_model
 
 basedir = Path(__file__).parent.parent
 dt = Blueprint("detector", __name__, template_folder="templates")
